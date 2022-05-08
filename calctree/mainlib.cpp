@@ -1,8 +1,11 @@
 #include<variant>
 #include<vector>
-#include<compare>
+#include<stack>
+//#include<compare>
 using std::variant;
 using std::vector;
+using std::stack;
+using std::get;
 
 struct calctree{
   calctree();
