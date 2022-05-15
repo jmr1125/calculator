@@ -120,7 +120,7 @@ CMakeFiles/test.dir/clean:
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
+CMakeFiles/main.dir/all: calctree/CMakeFiles/ctl.dir/all
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jiangmingrui/桌面/cmake/calculator/build/CMakeFiles --progress-num=3,4 "Built target main"
@@ -128,7 +128,7 @@ CMakeFiles/main.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangmingrui/桌面/cmake/calculator/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangmingrui/桌面/cmake/calculator/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangmingrui/桌面/cmake/calculator/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
