@@ -1,36 +1,43 @@
-#include<variant>
 #include<vector>
 #include<stack>
 #include<memory>
 #include<utility>
+#include<variant>
 //#include<compare>
-using std::variant;
-using std::vector;
-using std::stack;
-using std::get;
-using std::unique_ptr;
-using std::make_unique;
-using std::unique;
-using std::shared_ptr;
-using std::swap;
-using std::make_shared;
-//using std::as_const;
-using std::move;
-template<typename _T>
-const _T as_const(_T);
-
-struct calctree;
-using calctreeP = shared_ptr<calctree>;
 
 struct calctree{
-  calctree();
-  calctree(const calctree&);
-  calctree(const calctree&&);
-  ~calctree();
-  variant<int,char> val;
-  //calctree *l,*r;
-  calctreeP l,r;
+  virtual int getv() = 0;
+  virtual string getstr() = 0;
+  virtual ~calctree();
 };
+
+struct calcval:calctree{
+  calcval();
+  calcval(int v):v(v){};
+  virtual int getv()override;
+  virtual string getstr()override;
+  virtual ~calcval();
+  double v;
+};
+
+struct calcneg:calctree{
+  calcval();
+  calcval(calctree* v):v(v){};
+  virtual int getv()override;
+  virtual string getstr()override;
+  virtual ~calcneg();
+  calctree *v;
+};
+
+struct calcbin:calctree{
+  calcval();
+  calcval(calctree* l,calctree* r,char op):l(l),r(r),op(op){};
+  virtual int getv()override;
+  virtual string getstr()override;
+  virtual ~calcbin();
+  calctree* l,*r;
+  char op;
+}
 
 calctreeP build(vector<variant<int,char> >);
 

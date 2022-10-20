@@ -1,34 +1,48 @@
 #include "mainlib.cpp"
-#include <stack>
 
-template<typename _T>
-const _T as_const(_T val){
-  return val;
-};
-
-calctree::calctree(){
-  //l=r=nullptr;
-  //l=r=NULL;
-	//val=NULL;
+int calcval::getv(){
+  return v;
+}
+string calcval::getstr(){
+  return to_string(v);
+}
+calcval::~calcval(){
 }
 
-calctree::calctree(const calctree& rsh){
-  l=rsh.l;
-  r=rsh.r;
-  val=rsh.val;
-};
-calctree::calctree(const calctree&& rsh){
-  l=rsh.l;
-  r=rsh.r;
-  val=rsh.val;
+int calcneg::getv(){
+  return -v;
+}
+string calcneg::getstr(){
+  return "-"+v->getstr();
+}
+calcneg::~calcval(){
+  delete v;
 }
 
-calctree::~calctree(){
-  //delete l;
-  //delete r;
-  //delete this;
+int calcbin::getv(){
+  if(op=='+'){return l->getv()+r->getv();}
+  if(op=='-'){return l->getv()-r->getv();}
+  if(op=='*'){return l->getv()*r->getv();}
+  if(op=='/'){return l->getv()/r->getv();}
 }
-
+string calcbin::getstr(){
+  string ans="";
+  if(level(l->op)<level(this->op)){
+    ans+="(";
+  }
+  ans+=l->getstr();
+  if(level(l->op)<level(this->op)){
+    ans+=")";
+  }
+  ans+=op;
+  if(level(r->op)<level(this->op)){
+    ans+="(";
+  }
+  ans+=r->getstr();
+  if(level(r->op)<level(this->op)){
+    ans+=")";
+  }
+}
 
 calctreeP build(vector<variant<int,char> > exp){
   stack<calctreeP> num;
