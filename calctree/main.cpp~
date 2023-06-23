@@ -1,0 +1,97 @@
+#include "mainlib.cpp"
+
+int calcval::getv(){
+  return v;
+}
+string calcval::getstr(){
+  return to_string(v);
+}
+calcval::~calcval(){
+}
+
+int calcneg::getv(){
+  return -v->getv();
+}
+string calcneg::getstr(){
+  return "-"+v->getstr();
+}
+calcneg::~calcneg(){
+  delete v;
+}
+
+int calcbin::getv(){
+  if(op=='+'){return l->getv()+r->getv();}
+  if(op=='-'){return l->getv()-r->getv();}
+  if(op=='*'){return l->getv()*r->getv();}
+  if(op=='/'){return l->getv()/r->getv();}
+  return 0;
+}
+string calcbin::getstr(){
+  string ans="";
+  if(level(l->op)<level(this->op)){
+    ans+="(";
+  }
+  ans+=l->getstr();
+  if(level(l->op)<level(this->op)){
+    ans+=")";
+  }
+  ans+=op;
+  if(level(r->op)<level(this->op)){
+    ans+="(";
+  }
+  ans+=r->getstr();
+  if(level(r->op)<level(this->op)){
+    ans+=")";
+  }
+  return ans;
+}
+
+calctree* build(vector<variant<int,char> > exp){
+  stack<calctree*> num;
+  //stack<calctree> opt;
+  stack<char> opt;
+	{
+	  // calctree *p=new(calctree);
+	  // 	p->val='(';
+	  // 	opt.push(p);
+	  // 	exp.push_back(')');
+	  exp.push_back(')');
+	}
+	for(auto & i : exp){
+		if(i.index()==0){
+		  // calctree *p=new(calctree);
+		  auto p=new calcval;
+		  p->v=get<0>(i);
+			num.push(p);
+		}else{
+		  if(opt.empty()||level(get<char>(i))>=level(opt.top())){
+		  // char optc=i;
+		  // if(opt.empty()||level(optc)>=level(opt.top())){
+		    // calctree *p=new(calctree);
+		    opt.push(get<char>(i));
+			}else{
+		    while(level(opt.top())>level(get<char>(i))){
+					char optp=opt.top();opt.pop();
+					calctree *num1p=num.top();num.pop();
+					calctree *num2p=num.top();num.pop();
+					calcbin *ans=new calcbin;
+					ans->l=num1p;
+					ans->r=num2p;
+					ans->op=optp;
+					num.push(ans);
+		      //num.push(opt.top());
+				}
+			}
+		}
+	}
+	return num.top();
+}
+int level(char opt){
+	if(opt=='(') return 0;
+	if(opt=='+') return 1;
+	if(opt=='-') return 1;
+	if(opt=='*') return 2;
+	if(opt=='/') return 2;
+	if(opt==')') return -1;
+	throw 0x7f;
+}

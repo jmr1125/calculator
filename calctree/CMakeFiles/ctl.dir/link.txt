@@ -1,2 +1,0 @@
-/bin/ar qc libctl.a  CMakeFiles/ctl.dir/main.cpp.o
-/bin/ranlib libctl.a

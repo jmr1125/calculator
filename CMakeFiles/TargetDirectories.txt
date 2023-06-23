@@ -1,7 +1,0 @@
-/home/jiangmingrui/桌面/cmake/calculator/CMakeFiles/rebuild_cache.dir
-/home/jiangmingrui/桌面/cmake/calculator/CMakeFiles/edit_cache.dir
-/home/jiangmingrui/桌面/cmake/calculator/CMakeFiles/test.dir
-/home/jiangmingrui/桌面/cmake/calculator/CMakeFiles/main.dir
-/home/jiangmingrui/桌面/cmake/calculator/calctree/CMakeFiles/rebuild_cache.dir
-/home/jiangmingrui/桌面/cmake/calculator/calctree/CMakeFiles/edit_cache.dir
-/home/jiangmingrui/桌面/cmake/calculator/calctree/CMakeFiles/ctl.dir

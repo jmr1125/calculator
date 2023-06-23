@@ -1,0 +1,19 @@
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:47 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    directories:
+      source: "/mnt/l/cyghome/calculator/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/l/cyghome/calculator/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+      exitCode: 1
+...

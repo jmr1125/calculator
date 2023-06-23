@@ -1,7 +1,0 @@
-/cygdrive/e/calculator/build/CMakeFiles/main.dir
-/cygdrive/e/calculator/build/CMakeFiles/test.dir
-/cygdrive/e/calculator/build/CMakeFiles/edit_cache.dir
-/cygdrive/e/calculator/build/CMakeFiles/rebuild_cache.dir
-/cygdrive/e/calculator/build/calctree/CMakeFiles/ctl.dir
-/cygdrive/e/calculator/build/calctree/CMakeFiles/edit_cache.dir
-/cygdrive/e/calculator/build/calctree/CMakeFiles/rebuild_cache.dir
