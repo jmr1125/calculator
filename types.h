@@ -27,7 +27,7 @@ struct types{
   cond vals[256];
   shared_ptr<calctree> calcval[256];
   valT calcvals[256];
-  bool is_def[256];
+  int is_def[256];
   string format;
   string name;
 };

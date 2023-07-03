@@ -1,4 +1,5 @@
 #include "types.h"
+#include "calctree/mainlib.h"
 #include <charconv>
 #include <cwchar>
 using namespace std;
@@ -44,6 +45,9 @@ types::types() {
   //   vals[i].l = vals[i].r = 0;
   //   calcval[i] = NULL;
   // }
+  for(int i=0;i<=255;++i){
+    this->is_def[i]=0;
+  }
   init(*this);
 };
 types::~types() {
@@ -77,7 +81,7 @@ void load() {
     if (item == "type") {
       tmp = make_shared<types>();
       tmp->name = val;
-      Clogbase Clogln(tmp->calcvals);
+      Clogbase Clog(val) Clogs Clogln(tmp->calcvals);
       // clog << "type: " << val << endl;
       in = true;
     } else if (isdigit(item[0]) && (item[1] == 'l' || item[1] == 'r')) {
@@ -92,13 +96,15 @@ void load() {
     } else if (item == "def") {
       // clog << "val:" << val << endl;
       to_def = stoi(val);
+      Clogbase Clog("todef ") Clogln(to_def);
     } else if (item == "equ") {
       tmp->is_def[to_def] = true;
       tmp->calcval[to_def] = build(build(val));
+      Clogbase Clog("equ") Clogln(tmp->calcval[to_def]);
       // clog << "val:" << val << endl;
     } else if (item == "for") {
       tmp->format = val;
-      cout<<"for:y"<<val<<endl;
+      cout << "for:y" << val << endl;
     } else if (item == "endtype") {
       tps.insert({tmp->name, std::move(*tmp)});
     } else {
@@ -134,7 +140,7 @@ void show() {
         cout << i;
         if (sec.is_def[i]) {
           Clogbase Clogln("is_def");
-          cout << " = {"<<endl;
+          cout << " = {" << endl;
           sec.calcval[i].get()->show();
           cout << "}";
         }

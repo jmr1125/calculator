@@ -1,0 +1,7 @@
+/Users/jiang/Desktop/calculator/build/CMakeFiles/gen.dir
+/Users/jiang/Desktop/calculator/build/CMakeFiles/genpdf.dir
+/Users/jiang/Desktop/calculator/build/CMakeFiles/edit_cache.dir
+/Users/jiang/Desktop/calculator/build/CMakeFiles/rebuild_cache.dir
+/Users/jiang/Desktop/calculator/build/calctree/CMakeFiles/ctl.dir
+/Users/jiang/Desktop/calculator/build/calctree/CMakeFiles/edit_cache.dir
+/Users/jiang/Desktop/calculator/build/calctree/CMakeFiles/rebuild_cache.dir

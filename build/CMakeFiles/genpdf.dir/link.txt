@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libgenpdf.a CMakeFiles/genpdf.dir/genpdf.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libgenpdf.a

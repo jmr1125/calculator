@@ -1,4 +1,5 @@
-#include"gen.h"
+#include "gen.h"
+#include "calctree/mainlib.h"
 static int Random(int a, int b) {
   ++b;
   static bool init = false;
@@ -9,7 +10,7 @@ static int Random(int a, int b) {
   return a + ((double)rand() / (RAND_MAX / (b - a)));
 }
 vector<string> gen(int count, vector<reference_wrapper<types>> selects) {
-  const auto size=selects.size();
+  const auto size = selects.size();
   vector<string> res;
   res.reserve(count);
   for (int i = 1; i <= count; ++i) {
@@ -40,6 +41,7 @@ vector<string> gen(int count, vector<reference_wrapper<types>> selects) {
         t = form.find(ii, t);
       }
     }
+    Clogbase Clogs Clog("res======= "); Clogln(form);
     res.push_back(form);
   }
   // clog << "===clean===" << endl;

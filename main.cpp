@@ -1,4 +1,9 @@
 #include "gen.h"
+// #define HASLIB
+// #undef HASLIB
+#ifdef HASLIB
+#include "genpdf.h"
+#endif
 #include "types.h"
 #include <cstdlib>
 #include <exception>
@@ -16,21 +21,6 @@
 // #if libharu == 1
 // #include <hpdf.h>
 // #endif
-#define HASLIB
-#ifdef HASLIB
-#include <qpdf/Pl_Buffer.hh>
-#include <qpdf/Pl_DCT.hh>
-#include <qpdf/Pl_RunLength.hh>
-#include <qpdf/PointerHolder.hh>
-#include <qpdf/QIntC.hh>
-#include <qpdf/QPDF.hh>
-#include <qpdf/QPDFObjectHandle.hh>
-#include <qpdf/QPDFPageDocumentHelper.hh>
-#include <qpdf/QPDFPageObjectHelper.hh>
-#include <qpdf/QPDFWriter.hh>
-#include <qpdf/QUtil.hh>
-void genpdf(const vector<string> &);
-#endif
 using namespace std;
 vector<string> selected;
 vector<reference_wrapper<types>> selects;
@@ -67,6 +57,7 @@ int main() {
        << "============" << endl;
   auto p = gen(100, selects);
 #ifndef HASLIB
+  cout << "writing to 1.txt..." << endl;
   int id = 0;
   ofstream fout("1.txt");
   for (auto i : p) {
@@ -115,13 +106,3 @@ int main() {
 //   HPDF_Free(pdf);
 // }
 // #endif
-#ifdef HASLIB
-
-void genpdf(const vector<string> &p) {
-  QPDF pdf;
-  pdf.emptyPDF();
-  auto page=pdf.makeBlankPage(612,792);
-  QPDFWriter w(pdf, "1.pdf");
-  w.write();
-}
-#endif

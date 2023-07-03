@@ -1,0 +1,206 @@
+%!PS-Adobe-3.0
+%%Title: 1.txt
+%%For: jiang
+%%Creator: VIM - Vi IMproved 9.0 (2022 Jun 28)
+%%CreationDate: 2023-07-03 09:26:17
+%%DocumentData: Clean8Bit
+%%Orientation: Portrait
+%%Pages: (atend)
+%%PageOrder: Ascend
+%%BoundingBox: 59 49 564 800
+%%DocumentMedia: A4 595 842 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%DocumentSuppliedResources: procset VIM-Prolog 1.4 1
+%%+ encoding VIM-latin1 1.0 0
+%%Requirements: duplex collate
+%%EndComments
+%%BeginDefaults
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%PageMedia: A4
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset VIM-Prolog
+%%BeginDocument: /Applications/MacVim.app/Contents/Resources/vim/runtime/print/prolog.ps
+%!PS-Adobe-3.0 Resource-ProcSet
+%%Title: VIM-Prolog
+%%Version: 1.4 1
+%%EndComments
+% Editing of this file is NOT RECOMMENDED.  You run a very good risk of causing
+% all PostScript printing from VIM failing if you do.  PostScript is not called
+% a write-only language for nothing!
+/packedarray where not{userdict begin/setpacking/pop load def/currentpacking
+false def end}{pop}ifelse/CP currentpacking def true setpacking
+/bd{bind def}bind def/ld{load def}bd/ed{exch def}bd/d/def ld
+/db{dict begin}bd/cde{currentdict end}bd
+/T true d/F false d
+/SO null d/sv{/SO save d}bd/re{SO restore}bd
+/L2 systemdict/languagelevel 2 copy known{get exec}{pop pop 1}ifelse 2 ge d
+/m/moveto ld/s/show ld /ms{m s}bd /g/setgray ld/r/setrgbcolor ld/sp{showpage}bd
+/gs/gsave ld/gr/grestore ld/cp/currentpoint ld
+/ul{gs UW setlinewidth cp UO add 2 copy newpath m 3 1 roll add exch lineto
+stroke gr}bd
+/bg{gs r cp BO add 4 -2 roll rectfill gr}bd
+/sl{90 rotate 0 exch translate}bd
+L2{
+/sspd{mark exch{setpagedevice}stopped cleartomark}bd
+/nc{1 db/NumCopies ed cde sspd}bd
+/sps{3 db/Orientation ed[3 1 roll]/PageSize ed/ImagingBBox null d cde sspd}bd
+/dt{2 db/Tumble ed/Duplex ed cde sspd}bd
+/c{1 db/Collate ed cde sspd}bd
+}{
+/nc{/#copies ed}bd
+/sps{statusdict/setpage get exec}bd
+/dt{statusdict/settumble 2 copy known{get exec}{pop pop pop}ifelse
+statusdict/setduplexmode 2 copy known{get exec}{pop pop pop}ifelse}bd
+/c{pop}bd
+}ifelse
+/ffs{findfont exch scalefont d}bd/sf{setfont}bd
+/ref{1 db findfont dup maxlength dict/NFD ed{exch dup/FID ne{exch NFD 3 1 roll
+put}{pop pop}ifelse}forall/Encoding findresource dup length 256 eq{NFD/Encoding
+3 -1 roll put}{pop}ifelse NFD dup/FontType get 3 ne{/CharStrings}{/CharProcs}
+ifelse 2 copy known{2 copy get dup maxlength dict copy[/questiondown/space]{2
+copy known{2 copy get 2 index/.notdef 3 -1 roll put pop exit}if pop}forall put
+}{pop pop}ifelse dup NFD/FontName 3 -1 roll put NFD definefont pop end}bd
+CP setpacking
+(\004)cvn{}bd
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%BeginResource: encoding VIM-latin1
+%%BeginDocument: /Applications/MacVim.app/Contents/Resources/vim/runtime/print/latin1.ps
+%!PS-Adobe-3.0 Resource-Encoding
+%%Title: VIM-latin1
+%%Version: 1.0 0
+%%EndComments
+/VIM-latin1[
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/grave /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis]
+/Encoding defineresource pop
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%EndProlog
+%%BeginSetup
+595 842 0 sps
+1 nc
+T F dt
+T c
+%%IncludeResource: font Courier
+/_F0 /VIM-latin1 /Courier ref
+/F0 10 /_F0 ffs
+%%IncludeResource: font Courier-Bold
+/_F1 /VIM-latin1 /Courier-Bold ref
+/F1 10 /_F1 ffs
+%%IncludeResource: font Courier-Oblique
+/_F2 /VIM-latin1 /Courier-Oblique ref
+/F2 10 /_F2 ffs
+%%IncludeResource: font Courier-BoldOblique
+/_F3 /VIM-latin1 /Courier-BoldOblique ref
+/F3 10 /_F3 ffs
+/UO -1 d
+/UW 0.5 d
+/BO -2.5 d
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(1.txt                                                                         Page 1)59.5 792.4 ms
+F0 sf
+(78 - 50 =               87 - 59 =               96 - 13 =               94 - 30 =   )59.5 772.4 ms
+(            )59.5 762.4 ms
+(76 - 61 =               87 - 51 =               75 + 12 =               57 - 22 =   )59.5 752.4 ms
+(            )59.5 742.4 ms
+(75 - 58 =               97 - 53 =               76 - 10 =               72 - 21 =   )59.5 732.4 ms
+(            )59.5 722.4 ms
+(91 - 66 =               63 - 38 =               72 - 52 =               73 - 55 =   )59.5 712.4 ms
+(            )59.5 702.4 ms
+(49 + 32 =               50 + 49 =               20 + 60 =               53 - 23 =   )59.5 692.4 ms
+(            )59.5 682.4 ms
+(43 - 29 =               78 - 18 =               68 - 28 =               93 - 53 =   )59.5 672.4 ms
+(            )59.5 662.4 ms
+(32 + 27 =               87 - 21 =               78 - 67 =               20 + 14 =   )59.5 652.4 ms
+(            )59.5 642.4 ms
+(87 - 26 =               18 + 45 =               52 - 15 =               19 + 48 =   )59.5 632.4 ms
+(            )59.5 622.4 ms
+(36 + 32 =               77 - 62 =               37 + 51 =               19 + 31 =   )59.5 612.4 ms
+(            )59.5 602.4 ms
+(75 - 13 =               69 + 20 =               40 + 56 =               14 + 78 =   )59.5 592.4 ms
+(            )59.5 582.4 ms
+(57 + 15 =               15 + 29 =               69 - 18 =               12 + 59 =   )59.5 572.4 ms
+(            )59.5 562.4 ms
+(91 - 75 =               66 + 19 =               39 + 44 =               91 - 28 =   )59.5 552.4 ms
+(            )59.5 542.4 ms
+(32 + 55 =               91 - 71 =               61 - 22 =               10 + 69 =   )59.5 532.4 ms
+(            )59.5 522.4 ms
+(85 - 71 =               66 - 53 =               11 + 12 =               42 + 25 =   )59.5 512.4 ms
+(            )59.5 502.4 ms
+(58 + 14 =               98 - 42 =               77 - 61 =               45 + 45 =   )59.5 492.4 ms
+(            )59.5 482.4 ms
+(43 + 45 =               64 - 54 =               46 + 25 =               37 - 23 =   )59.5 472.4 ms
+(            )59.5 462.4 ms
+(25 + 20 =               86 + 12 =               71 + 22 =               42 + 43 =   )59.5 452.4 ms
+(            )59.5 442.4 ms
+(48 - 27 =               11 + 11 =               88 - 38 =               43 + 49 =   )59.5 432.4 ms
+(            )59.5 422.4 ms
+(46 + 16 =               42 + 16 =               85 - 61 =               68 - 41 =   )59.5 412.4 ms
+(            )59.5 402.4 ms
+(56 - 22 =               24 + 37 =               98 - 51 =               10 + 18 =   )59.5 392.4 ms
+(            )59.5 382.4 ms
+(22 + 13 =               31 + 22 =               15 + 85 =               97 - 42 =   )59.5 372.4 ms
+(            )59.5 362.4 ms
+(29 + 61 =               60 - 18 =               98 - 55 =               60 - 11 =   )59.5 352.4 ms
+(            )59.5 342.4 ms
+(65 - 11 =               30 + 40 =               78 + 18 =               94 - 80 =   )59.5 332.4 ms
+(            )59.5 322.4 ms
+(65 - 51 =               92 - 33 =               69 - 12 =               93 - 73 =   )59.5 312.4 ms
+(            )59.5 302.4 ms
+(14 + 65 =               41 - 29 =               87 - 22 =               76 - 44 =   )59.5 292.4 ms
+(            )59.5 282.4 ms
+re sp
+%%PageTrailer
+%%Trailer
+%%Pages: 1
+%%EOF
+

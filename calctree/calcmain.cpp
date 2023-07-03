@@ -41,12 +41,12 @@ valT calcbin::getv(valT (&vals)[256]) {
 }
 void calcbin::show() {
   Clogbase Clogln("zzz  d  aaa");
-  Clogbase cout << "op: " << this->op << endl;
-  Clogbase cout << "left:" << endl;
+  cout << "op: " << this->op << endl;
+  cout << "left:" << endl;
   l->show();
-  Clogbase cout << "right:" << endl;
+  cout << "right:" << endl;
   r->show();
-  Clogbase cout << "end" << endl;
+  cout << "end" << endl;
 }
 // string calcbin::getstr() {
 //   string ans = "";

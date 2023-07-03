@@ -3,6 +3,7 @@
 #include <iostream>
 #include <memory>
 #include <regex>
+#include <sstream>
 #include <stack>
 #include <string>
 #include <utility>
@@ -11,6 +12,7 @@
 using std::cout;
 using std::endl;
 using std::get;
+using std::move;
 using std::regex;
 using std::shared_ptr;
 using std::stack;
@@ -18,14 +20,13 @@ using std::string;
 using std::to_string;
 using std::variant;
 using std::vector;
-using std::move;
-//using std::clog;
-//#define Debug
+// using std::clog;
+#define Debug
 #ifdef Debug
-#define Clog(x) std::clog<<(x);
-#define Clogs std::clog<<' ';
-#define Clogln(x) std::clog<<(x)<<endl
-#define Clogbase std::clog<<__FILE__<<':'<<__LINE__<<"-> ";
+#define Clog(x) std::clog << (x);
+#define Clogs std::clog << ' ';
+#define Clogln(x) std::clog << (x) << endl
+#define Clogbase std::clog << __FILE__ << ':' << __LINE__ << "-> ";
 #else
 #define Clog(x)
 #define Clogs

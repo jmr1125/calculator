@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/llvm@15/lib CMakeFiles/test3.dir/testgenpdf.cpp.o -o test3  -Wl,-rpath,/opt/homebrew/lib libgenpdf.a /opt/homebrew/lib/libqpdf.29.4.0.dylib 
