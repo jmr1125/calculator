@@ -21,7 +21,7 @@ using std::to_string;
 using std::variant;
 using std::vector;
 // using std::clog;
-#define Debug
+// #define Debug
 #ifdef Debug
 #define Clog(x) std::clog << (x);
 #define Clogs std::clog << ' ';

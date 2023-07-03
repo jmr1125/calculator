@@ -10,11 +10,11 @@ void unk(string s) {
   cerr << s << endl;
   exit(1);
 }
-bool gettok() { // read conf
+bool gettok(istream &ist) { // read conf
   regex conf("([a-z0-9]+):(.*)");
   smatch sm;
   string s;
-  if (getline(cin, s)) {
+  if (getline(ist, s)) {
     if (regex_match(s.cbegin(), s.cend(), sm, conf)) {
       // clog << "val: " << sm[1] << " = " << sm[2] << endl;
       item = sm[1], val = sm[2];
@@ -45,8 +45,8 @@ types::types() {
   //   vals[i].l = vals[i].r = 0;
   //   calcval[i] = NULL;
   // }
-  for(int i=0;i<=255;++i){
-    this->is_def[i]=0;
+  for (int i = 0; i <= 255; ++i) {
+    this->is_def[i] = 0;
   }
   init(*this);
 };
@@ -70,13 +70,13 @@ bool types::check() {
 }
 map<string, types> tps;
 map<string, vector<size_t>> to_random;
-void load() {
+void load(istream &ist) {
   // clog << "loading ..." << endl;
   bool in = false;
   shared_ptr<types> tmp;
   int to_def;
 
-  while (gettok()) {
+  while (gettok(ist)) {
     // clog<<item<<' '<<val<<endl;
     if (item == "type") {
       tmp = make_shared<types>();
@@ -104,7 +104,7 @@ void load() {
       // clog << "val:" << val << endl;
     } else if (item == "for") {
       tmp->format = val;
-      cout << "for:y" << val << endl;
+      // cout << "for:y" << val << endl;
     } else if (item == "endtype") {
       tps.insert({tmp->name, std::move(*tmp)});
     } else {

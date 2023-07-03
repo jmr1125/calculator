@@ -10,4 +10,4 @@
 using std::vector;
 using std::string;
 
-void genpdf(const vector<string> &);
+void genpdf(const vector<string> &,string);

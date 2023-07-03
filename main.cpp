@@ -24,8 +24,23 @@
 using namespace std;
 vector<string> selected;
 vector<reference_wrapper<types>> selects;
-int main() {
-  load();
+int main(int argc, char *argv[]) {
+  if (argc != 3) {
+    // cout << argc << endl;
+    cout << "  usage: " << argv[0] << " *.conf"
+         << " *" << endl
+         << "  and generate";
+#ifdef HASLIB
+    cout << " *.pdf" << endl;
+#else
+    cout << " *.txt" << endl;
+#endif
+    return 1;
+  }
+  {
+    ifstream ist(argv[1]);
+    load(ist);
+  }
   // clog<<"====show===="<<endl;
   show();
   {
@@ -57,9 +72,9 @@ int main() {
        << "============" << endl;
   auto p = gen(100, selects);
 #ifndef HASLIB
-  cout << "writing to 1.txt..." << endl;
+  cout << "writing to "<<argv[2]<<".txt..." << endl;
   int id = 0;
-  ofstream fout("1.txt");
+  ofstream fout((string)argv[2] + ".txt");
   for (auto i : p) {
     ++id;
     // cout<<i<<',';
@@ -69,8 +84,10 @@ int main() {
     }
   }
 #else
-  cout << "ok" << endl;
-  genpdf(p);
+  // cout << "ok" << endl;
+  cout << "write to "<< argv[2] << ".pdf..."<<endl;
+  genpdf(p, (string)argv[2]+".pdf");
+  cout<<"ok"<<endl;
 #endif
 }
 // void handler(HPDF_STATUS error_no, HPDF_STATUS detail_no, void *user_data) {

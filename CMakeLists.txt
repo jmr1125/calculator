@@ -13,7 +13,7 @@ else()
 endif()
 
 #message(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
-
+#set(haslib OFF)
 if(${haslib})
   message(STATUS "haslib")
   add_definitions(-DHASLIB)

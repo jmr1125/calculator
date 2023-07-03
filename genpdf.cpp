@@ -16,7 +16,7 @@ static string getstring(vector<pointstring> v){
   }
   return res;
 }
-void genpdf(const vector<string> &p) {
+void genpdf(const vector<string> &p,string file) {
   QPDF pdf;
   pdf.emptyPDF();
   QPDFObjectHandle font = pdf.makeIndirectObject("<<"
@@ -38,7 +38,7 @@ void genpdf(const vector<string> &p) {
     ps[i].x=72+130*(i%4);
     ps[i].y=720-27*(i/4);
     ps[i].s=p[i];
-    ps[i].size=20;
+    ps[i].size=18;
   }
   contents=pdf.newStream(getstring(ps));
   }
@@ -59,6 +59,6 @@ void genpdf(const vector<string> &p) {
 
   QPDFPageDocumentHelper(pdf).addPage(page, true);
 
-  QPDFWriter w(pdf, "1.pdf");
+  QPDFWriter w(pdf, file.c_str());
   w.write();
 }
